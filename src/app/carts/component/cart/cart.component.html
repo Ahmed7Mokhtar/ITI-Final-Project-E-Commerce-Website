@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>عربة التسوق</b></h4>
+                    </div>
+                    <div class="col align-self-center text-right text-muted">{{cartProducts.length}} سلع</div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom" *ngFor="let item of cartProducts; let index= index">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="{{item.item.location}}"></div>
+                    <div class="col">
+                        <div class="row text-muted">{{item.item.productName}}</div>
+                        <!-- <div class="row">Cotton T-shirt</div> -->
+                    </div>
+                    <div class="col">
+                        <div class="quantity">
+
+                            <input class="form-control" type="number" (change)="detectChange()"
+                                [(ngModel)]="item.quantity" min="1">
+
+                        </div>
+                    </div>
+                    <div class="col">{{item.item.sellingPrice * item.quantity}}ج.م
+                        <span class="close" (click)="deleteProduct(index)">&#10005;</span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <div class="back-to-shop fs-3">
+                <a>&leftarrow;</a>
+                <a class="text-muted" style="text-decoration: none;" href="/products">عودة الي المنتاجات</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 summary text-right">
+            <div>
+                <h5><b>ملخص الطلب
+                    </b></h5>
+            </div>
+
+
+            <div class="row " style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <p class="col text-lg-left pt-60">المجموع</p>
+                <div class="col text-lg-right">{{total}} ج.م</div>
+            </div>
+            <button (click)="checkUser()" *ngIf="cartProducts.length != 0" class="boxed-btn btn element"
+                style="height: 40px;">تاكيد
+                الطلب</button>
+
+        </div>
+
+    </div>

@@ -1,0 +1,22 @@
+<!-- <div class="box mt-5">
+    <div class="my-2 w-25"></div>
+    <div class="row">
+        <div class="col-md-3 col-sm-12" *ngIf="let item of productsFF">
+            <div>{{item.productName}}</div>
+            <app-productelectric [data3]="item"></app-productelectric>
+        </div>
+    </div>
+
+</div> -->
+
+
+<div class="box mt-5">
+    
+    <div class="row" >
+        <div class="col-md-3 col-sm-12" *ngFor="let item of productsFF" >     
+           <!-- <div> {{item.productName}}</div> -->
+           <app-productelectronic [data2]="item" (item)="addtocart3($event)"></app-productelectronic>
+           <!-- <div><img src="{{item.location}}"></div> -->
+        </div>
+    </div>
+</div>

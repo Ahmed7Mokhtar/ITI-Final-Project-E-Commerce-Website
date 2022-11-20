@@ -1,0 +1,26 @@
+ <!-- <div>
+            <img src="{{item.location}}">
+            <div class="body">
+                <h4>{{item.productName}}</h4>
+                <p>{{item.desc}}</p>
+            </div>
+            <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
+                <button class="btn btn-success">Add To Cart</button>
+                <span>{{item.price}} L.E</span>
+            </div>
+           </div> -->
+           <!-- <app-productmattress [dataM]="item"></app-productmattress> -->
+
+
+
+<div class="box mt-5 text-right">
+    
+    <div class="row" >
+        <div class="col-md-3 col-sm-12" *ngFor="let item of productsFFF" >  
+
+           <app-productmattress [dataM]="item" (item)="addtocart3($event)"></app-productmattress>
+           <!-- <div><img src="{{item.location}}"></div> -->
+
+        </div>
+    </div>
+</div>

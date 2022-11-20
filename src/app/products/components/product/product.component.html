@@ -1,0 +1,22 @@
+<div class="data myelement" style=" margin-bottom :30px;">
+
+    <div routerLink="/details/{{data.id}}">
+        <img src="{{data.location}}" alt="">
+        <div class="body">
+            <h4>{{data.productName}}</h4>
+            <p>{{data.disc}}</p>
+        </div>
+    </div>
+
+    <div class="px-3 mb-2 d-flex justify-content-between align-datas-center hoverC" style="padding-bottom:20px ;">
+        <div class="d-flex w-50" *ngIf="addButton">
+            <input type="number" min="1" class="form-control" [(ngModel)]="amount">
+            <button class="btn ml-10" style="border-color: rgb(152,130,214); width: 70px;"
+                (click)="add();addButton = false">اضافه</button>
+        </div>
+        <span class="text-center p-2" style="background-color:rgb(204, 194, 235);">{{data.sellingPrice}} ج.م</span>
+        <button class="btn " *ngIf="!addButton" (click)="addButton = true">أضف الي العربة</button>
+
+    </div>
+
+</div>

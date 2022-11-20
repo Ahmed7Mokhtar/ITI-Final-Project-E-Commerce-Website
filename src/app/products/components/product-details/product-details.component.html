@@ -1,0 +1,70 @@
+<!-- <div class="container box">
+    <div class="row" >
+
+        <div class="col-md-5 col-sm-12 element" >
+              <div class="info text-right">
+                <ul class="list-unstyled">
+                    <li ><strong> </strong>{{data.productName}}</li>
+                    <hr>
+                    <li><strong> </strong>{{data.disc}}</li>
+                    <hr>
+                    <li><strong> </strong>{{data.sellingPrice}}ج.م</li>
+                </ul>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="boxed-btn btn-outline-secondary" >اضف الي العربه</button>
+                  </div>
+
+                
+            </div>
+
+
+            
+            
+            
+        </div>
+
+        <div class="col-md-7 col-sm-12 ml-40"  style=" width: 400px;">
+        
+            <img src="{{data.location}}" alt="sas">
+
+        </div>
+    </div>
+    <div class="text-center">
+    </div>
+</div> 
+
+ -->
+
+
+<div class="container text-center bg-light">
+    <div class="row mb-40 bg-light">
+        <div class="col bg-light">
+
+            <div style="background-color: white; width: 65%;height:70%; margin: 100px;">
+                <ul class="list-unstyled">
+                    <li class="pt-30"><strong> </strong>{{data.productName}}</li>
+                    <!-- <hr> -->
+
+                    <li class="text-muted"><strong> </strong>{{data.disc}}</li>
+                    <!-- <hr> -->
+                    <li class="fs-1"><strong> </strong>{{data.sellingPrice}}ج.م</li>
+
+                </ul>
+                <div class="d-grid gap-3 col-7 mx-auto mt-40">
+                    <!-- <app-product [data]="item" (item)="addtocart($event)"></app-product> -->
+
+                    <button class="boxed-btn btn-outline-secondary" (click)="add()">اضف الي
+                        العربة</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col" style=" background-color: white;">
+            <img src="{{data.location}}" alt="sas">
+        </div>
+        <div class="text-left back-to-shop fs-3">
+            <a>&leftarrow;</a>
+            <a class="text-muted" style="text-decoration: none;" href="/products">عودة الي المنتاجات</a>
+        </div>
+    </div>
+</div>

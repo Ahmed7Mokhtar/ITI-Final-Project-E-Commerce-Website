@@ -1,0 +1,33 @@
+<!-- <div class="item">
+    <img src="{{data2.location}}" alt="">
+    <div class="body">
+        <div>{{data2.productName}}</div>
+        <p>{{data2.desc}}</p>
+    </div>
+    <div class="px-3 mb-2 d-flex jusstify-content-between align-item-center">
+        <button class="btn btn-success">Addd To Cart</button>
+        <span>{{data2.price}}</span>
+    </div>
+</div> -->
+
+
+<div class="data myelement" style=" margin-bottom :30px;">
+    <div routerLink="/details/{{data2.id}}">
+        <img src="{{data2.location}}" alt="">
+    <div class="body text-right">
+        <h4>{{data2.productName}}</h4>
+        <p>{{data2.disc}}</p>
+    </div>
+    </div>
+    
+    <div class="px-3 mb-2 d-flex justify-content-between align-datas-center " style="padding-bottom:20px ;">
+        <div class="d-flex w-50" *ngIf="addButton">
+            <input type="number" min="1" class="form-control" [(ngModel)]="amount">
+            <button class="btn ml-10" style="border-color: rgb(152,130,214); width: 70px;" (click)="add();addButton = false">اضافه</button>
+        </div>
+        <span class="text-center p-2" style="background-color:rgb(204, 194, 235);">{{data2.sellingPrice}} ج.م</span>
+        <button class="btn " style="border-color: rgb(152,130,214);" *ngIf="!addButton" (click)="addButton = true" > اضف الي العربة</button>
+
+    </div>
+    
+</div>

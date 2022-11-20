@@ -1,0 +1,126 @@
+<header>
+    <div class="header-area ">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+
+                    <div class="header-right1 d-flex align-items-center">
+
+                        <div class="search d-none d-md-block">
+                            <ul class="d-flex align-items-center">
+
+                                <li>
+                                    <div class="card-stor" routerLink="/cart">
+                                        <img src="assets/img/gallery/card.svg" alt="">
+                                        <span style="color: black;" *ngIf="getCartLength() > 0">
+                                            +{{getCartLength()}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-menu  d-none d-lg-block ">
+
+                            <nav>
+                                <ul id="navigation">
+                                    <li *ngIf="!checkIsloggedIn()"><a href="/login">تسجيل دخول</a></li>
+                                    <li *ngIf="checkIsloggedIn()" style="font-size: 13px; color: darkmagenta;">
+                                        {{userName}} أهلا بك
+                                    </li>
+                                    <li *ngIf="checkIsloggedIn()" (click)="signOut()"><a href="/category">تسجيل
+                                            الخروج</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="header-right1 d-flex align-items-center">
+
+                        <div class="main-menu  d-none d-lg-block ">
+
+                            <!-- <div class="main-menu  d-none d-lg-block">
+                                <div class="navbar-collapse main-menu " [class.collapse]="collapsed" id="navbarContent">
+                                    <button class="navbar-toggler" type="button" aria-controls="navbarContent"
+                                    [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation"
+                                    (click)="collapsed = !collapsed">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button> -->
+
+                            <nav>
+                                <ul id="navigation">
+
+
+                                    <li><a routerLink="/contact">اتصل بنا</a></li>
+
+                                    <li><a routerLink="/about">من نحن</a></li>
+
+                                    <li><a routerLink="/products">المنتاجات</a>
+                                        <ul class="submenu">
+                                            <li><a routerLink="/products">جميع المنتاجات</a></li>
+                                            <li><a routerLink="/electronics">أجهزة كهربائية</a></li>
+                                            <li><a routerLink="/houseware">أدوات منزلية</a></li>
+                                            <li><a routerLink="/mattress"> مفروشات</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a routerLink="/category">الرئيسية</a></li>
+                                    <li *ngIf="checkIsAdmin()"><a routerLink="/category">صفحة
+                                            المدير</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="logo">
+                            <a href="index.html"><img src="assets/img/gallery/logo.png" alt=""></a>
+                        </div> -->
+
+
+            </div>
+            <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+</header>
+
+
+<!-- <nav class="navbar navbar-expand-md navbar-light fixed-top"> -->
+<!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home">
+      <span id="logo">Logo</span>
+    </a>
+   
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation"     (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+  
+    <div class="navbar-collapse main-menu " [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/home">HOME <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/learning">Page1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/project">Page2</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/happiness">page3</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/category">الرئيسية</a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
